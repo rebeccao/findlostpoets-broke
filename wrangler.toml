@@ -1,4 +1,4 @@
-name = "remix-cloudflare-workers"
+name = "findlostpoets"
 
 workers_dev = true
 main = "./build/index.js"
@@ -7,3 +7,6 @@ compatibility_date = "2023-04-20"
 
 [site]
   bucket = "./public"
+
+[vars]
+  DATABASE_URL="prisma://aws-us-east-1.prisma-data.com/?api_key=n7x-cR6be5U-H2vnYZ0QEaIL_6TWDuosHKgeZ5DCnKun4s8q_pVD64AXPS_wynNy"
