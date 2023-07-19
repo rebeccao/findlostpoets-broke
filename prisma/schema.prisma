@@ -6,21 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
-}
-
-model Log {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  level   Level
-  message String
-  meta    Json
-}
-
-enum Level {
-  Info
-  Warn
-  Error
+  provider  = "mongodb"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Poet {
@@ -41,7 +29,7 @@ model Poet {
   latCnt  Float?
   lexCnt  Int
   named   Boolean?
-  oAddr   String
+  oAddr   String?
   oNam    String?
   ori     String
   oriCnt  Float
